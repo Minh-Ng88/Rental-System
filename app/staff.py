@@ -53,3 +53,7 @@ class Staff(User):
                     data[7] = new_status
                     line = "|".join(data) + "\n"
                 f.write(line)
+
+    def record_damage(self, contract_id, description, cost):
+        with open("app/data/damages.txt", "a", encoding="utf-8") as f:
+            f.write(f"{contract_id}|{description}|{cost}\n")

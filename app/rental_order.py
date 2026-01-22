@@ -32,3 +32,13 @@ class RentalOrder:
                     f"{o.order_id}|{o.user_id}|{o.rental_date}|"
                     f"{o.return_date}|{o.total_price}|{o.status}\n"
                 )
+    
+    @staticmethod
+    def find_by_user(user_id):
+        return [o for o in RentalOrder.load_all() if o.user_id == user_id]
+
+    def cancel(self):
+        if self.status != "new":
+            return False
+        self.update_status("cancelled")
+        return True
