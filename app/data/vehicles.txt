@@ -1,0 +1,10 @@
+V01|Toyota Vios|Toyota|5|available|500000|Sedan economy car
+V02|Honda City|Honda|5|available|520000|Fuel efficient sedan
+V03|Mazda 3|Mazda|5|available|600000|Modern sedan
+V04|Toyota Fortuner|Toyota|7|available|900000|SUV family car
+V05|Ford Everest|Ford|7|available|950000|Large SUV
+V06|Kia Morning|Kia|4|available|400000|Compact city car
+V07|Hyundai Accent|Hyundai|5|available|550000|Popular sedan
+V08|Mitsubishi Xpander|Mitsubishi|7|available|800000|MPV family car
+V09|VinFast VF e34|VinFast|5|available|700000|Electric vehicle
+V10|Toyota Hilux|Toyota|5|available|1000000|Pickup truck

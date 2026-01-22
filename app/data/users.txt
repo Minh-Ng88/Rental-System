@@ -1,0 +1,8 @@
+1|Nguyen Van A|admin@gmail.com|123|0900000001|Ha Noi|2025-01-01|admin
+2|Tran Thi L|staff1@gmail.com|123|0900000002|Ha Noi|2025-01-01|staff
+3|Le Thanh N|staff2@gmail.com|123|0900000003|Ho Chi Minh|2025-01-01|staff
+4|Nguyen Van A|a@gmail.com|123|0900000004|Ha Noi|2025-01-01|customer
+5|Tran Thi B|b@gmail.com|123|0900000005|Da Nang|2025-01-01|customer
+6|Le Van C|c@gmail.com|123|0900000006|Can Tho|2025-01-01|customer
+7|Pham Thi D|d@gmail.com|123|0900000007|Hai Phong|2025-01-01|customer
+8|Hoang Van E|e@gmail.com|123|0900000008|Hue|2025-01-01|customer
