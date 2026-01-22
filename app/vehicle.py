@@ -40,3 +40,14 @@ class Vehicle:
                     f"{v.vehicle_id}|{v.name}|{v.brand}|{v.capacity}|"
                     f"{v.status}|{v.price_per_day}|{v.description}\n"
                 )
+
+    @staticmethod
+    def search(keyword):
+        result = []
+        for v in Vehicle.load_all():
+            if keyword.lower() in v.name.lower() or keyword.lower() in v.description.lower():
+                result.append(v)
+        return result
+
+    def is_available(self):
+        return self.status == "available"
