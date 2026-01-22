@@ -45,3 +45,14 @@ class User:
                     f"{u.user_id}|{u.full_name}|{u.email}|{u.password}|"
                     f"{u.phone}|{u.address}|{u.created_at}|{u.role}\n"
                 )
+    
+    def change_password(self, new_password):
+        users = User.load_all()
+        with open("app/data/users.txt", "w", encoding="utf-8") as f:
+            for u in users:
+                if u.user_id == self.user_id:
+                    u.password = new_password
+                f.write(
+                    f"{u.user_id}|{u.full_name}|{u.email}|{u.password}|"
+                    f"{u.phone}|{u.address}|{u.created_at}|{u.role}\n"
+                )
