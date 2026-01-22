@@ -15,3 +15,13 @@ class RentalDetail:
                 f"{self.detail_id}|{self.order_id}|{self.vehicle_id}|"
                 f"{self.price_per_day}|{self.days}\n"
             )
+
+    @staticmethod
+    def calculate_total(order_id):
+        total = 0
+        with open("app/data/rental_details.txt", "r", encoding="utf-8") as f:
+            for line in f:
+                detail_id, o_id, _, price, days = line.strip().split("|")
+                if o_id == order_id:
+                    total += int(price) * int(days)
+        return total
