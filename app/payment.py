@@ -15,3 +15,11 @@ class Payment:
 
     def verify_payment(self):
         return self.status == "paid"
+    
+    def is_paid(order_id):
+        with open("app/data/payments.txt", "r", encoding="utf-8") as f:
+            for line in f:
+                _, o_id, _, _, status = line.strip().split("|")
+                if o_id == order_id and status == "paid":
+                    return True
+        return False
