@@ -1,0 +1,5 @@
+pytest>=7.0
+# Thêm các lib khác nếu app cần, ví dụ:
+# flask
+# pymysql
+# python-dotenv
