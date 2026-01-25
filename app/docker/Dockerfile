@@ -1,11 +1,16 @@
 FROM python:3.12-slim
 
 WORKDIR /app
-COPY requirements.txt .
+
+# Copy requirements từ thư mục app
+COPY app/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+# Copy toàn bộ source code
+COPY app .
 
+# Cài pytest
 RUN pip install --no-cache-dir pytest
 
-CMD ["pytest", "test/", "-v"]
+# Chạy test tự động
+CMD ["pytest", "test", "-v"]
