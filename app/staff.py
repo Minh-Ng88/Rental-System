@@ -1,4 +1,5 @@
 from user import User
+from vehicle import Vehicle
 
 class Staff(User):
     def __init__(
@@ -28,10 +29,23 @@ class Staff(User):
             )
 
     def handover_vehicle(self, contract_id):
-        self._update_contract_status(contract_id, "in_use")
+        with open("app/data/contracts.txt", "r", encoding="utf-8") as f:
+            for line in f:
+                data = line.strip().split("|")
+                if data[0] == contract_id:
+                    vehicle_id = data[4]
+                    Vehicle.find_by_id(vehicle_id).update_status("rented")
 
     def receive_vehicle(self, contract_id):
+        with open("app/data/contracts.txt", "r", encoding="utf-8") as f:
+            for line in f:
+                data = line.strip().split("|")
+                if data[0] == contract_id:
+                    vehicle_id = data[4]
+                    Vehicle.find_by_id(vehicle_id).update_status("available")
+
         self._update_contract_status(contract_id, "completed")
+
 
     def print_contract(self, contract_id):
         with open("app/data/contracts.txt", "r", encoding="utf-8") as f:
