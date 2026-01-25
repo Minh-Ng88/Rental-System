@@ -36,7 +36,7 @@ class User:
 
     def update_profile(self, phone, address):
         users = User.load_all()
-        with open("data/users.txt", "w", encoding="utf-8") as f:
+        with open("app/data/users.txt", "w", encoding="utf-8") as f:
             for u in users:
                 if u.user_id == self.user_id:
                     u.phone = phone
